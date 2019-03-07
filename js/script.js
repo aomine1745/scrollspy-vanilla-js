@@ -10,7 +10,7 @@ currentScrollPos, targetClass;
 // Document Scroll
 document.onscroll = () => {
 	navH = nav.offsetHeight;
-	currentScrollPos = document.documentElement.scrollTop;
+	currentScrollPos = document.documentElement.scrollTop || document.body.scrollTop;
 	sections.forEach((e) => {
 		if (e.offsetTop < (currentScrollPos + navH) && (currentScrollPos + navH) < (e.offsetTop + e.offsetHeight)) {
 			targetClass = '.' + e.id + '-marker';
@@ -24,7 +24,7 @@ document.onscroll = () => {
 	});
 	
 	// Cambiar color
-	if(currentScrollPos > navH || document.body.scrollTop > navH){
+	if(currentScrollPos > navH){
 		nav.classList.add('bg-blue');
 	}else{
 		nav.classList.remove('bg-blue');
