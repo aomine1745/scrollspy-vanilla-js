@@ -1,0 +1,109 @@
+/*GENERALES*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+h2{
+	color: #fff;
+	font-size: 4em;
+	text-align: center;
+}
+/*scroll*/
+body::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+}
+body::-webkit-scrollbar-track{
+	background-color: rgba(0, 0, 0, .1); 
+}
+body::-webkit-scrollbar-thumb{
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, .3);
+}
+/*NAV*/
+header nav{
+	width: 100%;
+	background-color: transparent;
+	position: fixed;
+	transition: all .5s ease;
+	box-shadow: 0 1px 6px rgba(0, 00, 0, .3);
+}
+.bg-blue{
+	background-color: #083d77;
+}
+#nav .container{
+	padding: 0 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#nav .logo{
+	color: #fff;
+	font-size: 32px;
+	padding: 5px 0;
+}
+#nav ul{
+	display: flex;
+}
+#nav ul li{
+	list-style: none;
+}
+#nav ul li a{
+	font-size: 16px;
+	display: inline-block;
+	margin: 0 10px;
+	color: rgba(255, 255, 255, .5);
+	transition: all .5s ease;
+}
+#nav ul li .active{
+	color: #fff;
+	position: relative;
+}
+#nav ul li .active:before{
+	content: '\f107';
+	font-family:"Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 12px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -150%);
+}
+/*SECTIONS*/
+#inicio, #nosotros, #servicios, #contactanos, footer{
+	height: 100vh;
+	width: 100%;
+	padding-top: 60px;
+}
+/*INICIO*/
+#inicio{
+	background-color: #ff4c00;
+}
+/*NOSOTROS*/
+#nosotros {
+	background-color: #69995d;
+}
+/*SERVICIOS*/
+#servicios{
+	background-color: #e3dfff;
+}
+#servicios h2{
+	color: #262626;
+}
+/*CONTACTANOS*/
+#contactanos{
+	background-color: #012a36;
+}
+/*FOOTER*/
+footer{
+	height: 500px;
+	background-color: #181a1e;
+}
