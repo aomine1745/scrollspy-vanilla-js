@@ -7,9 +7,12 @@ var navLinks = document.querySelectorAll('nav div ul li a'),
 sections = document.querySelectorAll('section'),
 currentScrollPos, targetClass;
 
+window.onload = ()=>{
+	navH = nav.offsetHeight;
+}
+
 // Document Scroll
 document.onscroll = () => {
-	navH = nav.offsetHeight;
 	currentScrollPos = document.documentElement.scrollTop || document.body.scrollTop;
 	sections.forEach((e) => {
 		if (e.offsetTop < (currentScrollPos + navH) && (currentScrollPos + navH) < (e.offsetTop + e.offsetHeight)) {
